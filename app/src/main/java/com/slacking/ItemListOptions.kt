@@ -15,7 +15,6 @@ import com.jaredrummler.ktsh.Shell
 
 class ItemListOptions {
     private val sharePrefs = sharePrefs()
-    //private val prefs = Prefs()
     private fun addCommand(id: String, prefs: Prefs): Shell.Command.Result {
         val addCommandApp =  Shell.SU.run(
             "device_config put game_overlay ${id} mode=1,downscaleFactor=${prefs.resolutionApp}" +
@@ -33,7 +32,6 @@ class ItemListOptions {
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 // Call onDone result here
                 val command_ = addCommand(appIdTextEdit.text.toString(), prefs)
-                Toast.makeText(context_, prefs.resolutionApp.toString(), Toast.LENGTH_LONG).show()
                 if (!command_.isSuccess)
                     Toast.makeText(context_, "App not found", Toast.LENGTH_SHORT).show()
                 true
@@ -59,7 +57,6 @@ class ItemListOptions {
                     var formatVal = seekbarVal.progress.toFloat() / 10
                     sharePrefs.changeResolution(formatVal.toString(), gameQualitySharedPref)
                     prefs.resolutionApp = sharePrefs.getpref(gameQualitySharedPref, "resolution")
-                    Toast.makeText(context_, prefs.resolutionApp.toString(), Toast.LENGTH_LONG).show()
                     resolutionVal.text = sharePrefs.getpref(gameQualitySharedPref, "resolution")
 
                 }
@@ -77,7 +74,6 @@ class ItemListOptions {
             val radioButton = dialog.findViewById<RadioButton>(selectedOption)
             return radioButton
         }
-        Toast.makeText(context_, prefs.resolutionApp.toString(), Toast.LENGTH_LONG).show()
         when(sharePrefs.getpref(sharedPrefs, "state")){
             "Performance" -> {
                 val button = dialog.findViewById<RadioButton>(R.id.radioButton2)
