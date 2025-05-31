@@ -15,12 +15,6 @@
 
 ---
 
-## 🎮 How to Use
-
-https://github.com/user-attachments/assets/22f4edff-23ef-4024-a897-7f111a72080b
-
----
-
 ## 📦 Requirements
 
 * Android 13.0+
