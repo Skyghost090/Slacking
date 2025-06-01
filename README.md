@@ -30,6 +30,13 @@ adb install slacking-release.apk
 
 Or install directly on your device.
 
+## 🧠 How to use
+
+https://github.com/user-attachments/assets/ba74f52b-6781-45e9-adb2-da62d4189645
+
+* First set resolution
+* And after type app id even if it is already on the list
+
 ---
 
 ## 🤝 Contributing
